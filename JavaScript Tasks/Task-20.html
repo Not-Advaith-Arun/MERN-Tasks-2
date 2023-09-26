@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Advaith Arun 21BCE5815">
+    <title>Task-20</title>
+    <style>
+        body{
+            font-size: large;
+        }
+        label,input{
+            font-size: inherit;
+        }
+        div{
+            font-size: inherit;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <label for="i1" style="margin:20px;">Enter the String</label>
+    <input id="i1" type="text" placeholder="Enter the String" required>
+    <button type="button" onclick="alphaArrange()">Submit</button>
+    <br><br>
+    <div id="d1"></div>
+    </center>
+    <script>
+        function alphaArrange(){
+            let inp = document.getElementById("i1").value.split('');
+            let fin = inp.sort().join('');
+            document.getElementById("d1").innerHTML="The Answer is " + fin
+        }
+
+    </script>
+</body>
+</html>

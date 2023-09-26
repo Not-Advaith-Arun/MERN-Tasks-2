@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Advaith Arun 21BCE5815">
+    <title>Task-19</title>
+    <style>
+        body{
+            font-size: large;
+        }
+        label,input{
+            font-size: inherit;
+        }
+        div{
+            font-size: inherit;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <label for="i1" style="margin:20px;">Enter a number</label>
+    <input id="i1" type="number" placeholder="Enter a number" required>
+    <button type="button" onclick="reversedNumber()">Submit</button>
+    <br><br>
+    <div id="d1"></div>
+    </center>
+    <script>
+        function reversedNumber(){
+            let num = document.getElementById("i1").value
+            let str = num.toString();
+            let arr = str.split('');
+            let rev = arr.reverse();
+            let strfin = rev.join('');
+            let fin = parseInt(strfin);
+            document.getElementById("d1").innerHTML="The Answer is " + fin
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="21BCE5815  Advaith Arun">
+    <title>Task-23</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <Style>
+        table{
+            margin-top:350px;
+            padding: 20px;
+            border: 2px solid black;
+        }
+        table,tr,td{
+            padding-left: 20px;
+            padding-right: 20px;
+            line-height: 40px !important;
+        }
+    </Style>
+</head>
+<body>
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <label for="i1">Name:</label>
+                </td>
+                <td>
+                    <input id="i1" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><div id="d1"></div></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="i2">Email:</label>
+                </td>
+                <td>
+                    <input id="i2" type="email" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><div id="d2"></div></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="i3">Website:</label>
+                </td>
+                <td>
+                    <input id="i3" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><div id="d3"></div></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="i4">Message:</label>
+                </td>
+                <td>
+                    <textarea id="i4"></textarea>   
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><div id="d4"></div></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="check()">Submit</button>
+                </td>
+                <td>
+                    <button type="reset">Clear</button>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <script>
+        function check(){
+            let name = document.getElementById("i1").value;
+            let email = document.getElementById("i2").value;
+            let website = document.getElementById("i3").value;
+            let message = document.getElementById("i4").value;
+            var nameregex = /^[a-zA-Z ]+$/
+            if(!name.match(nameregex)){
+                document.getElementById("d1").innerHTML =`<p class="alert alert-danger">Invalid</p>`
+            }
+            else{
+                document.getElementById("d1").innerHTML = `<p class="alert alert-success">Valid</p>`
+            }
+
+            var emailregex = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]+$/
+            if(!email.match(emailregex)){
+                document.getElementById("d2").innerHTML = `<p class="alert alert-danger">Invalid</p>`
+            }
+            else{
+                document.getElementById("d2").innerHTML = `<p class="alert alert-success">Valid</p>`
+            }
+
+            var webregex = /^(www|https:\/\/www)?\.[a-zA-Z0-9]+\.[a-zA-Z]+$/
+            if(!website.match(webregex)){
+                document.getElementById("d3").innerHTML = `<p class="alert alert-danger">Invalid</p>`
+            }
+            else{
+                document.getElementById("d3").innerHTML = `<p class="alert alert-success">Valid</p>`
+            }
+            var messregex = /^[a-zA-Z0-9]+$/
+            if(!message.match(messregex)){
+                document.getElementById("d4").innerHTML = `<p class="alert alert-danger">Invalid</p>`
+            }
+            else{
+                document.getElementById("d4").innerHTML = `<p class="alert alert-success">Valid</p>`
+            }
+        }
+    </script>
+</body>
+</html>

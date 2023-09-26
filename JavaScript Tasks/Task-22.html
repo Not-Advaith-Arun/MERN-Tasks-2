@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="21BCE5815  Advaith Arun">
+    <title>Task-22</title>
+</head>
+<body>
+    <button type="button" onclick="showDate()">Show Date</button>
+    <p id="d1" style="color: black;"></p>
+    <br>
+    <br>
+    <button type="button" onclick="showTime()">Show Time</button>
+    <p id="d2" style="color: black;"></p>
+
+    <script>
+        function showDate(){
+            let today = new Date();
+            let dd = today.getDate();
+            let mm = today.getMonth() + 1;
+            let yyyy = today.getFullYear();
+            if(dd < 10){
+                dd = '0' + dd;
+            }
+            if(mm < 10){
+                mm = '0' + mm;
+            }
+            da = dd +"/"+ mm +"/"+ yyyy;
+            document.getElementById("d1").innerHTML=da;
+        }
+        function showTime(){
+            let d = new Date();
+            document.getElementById("d2").innerHTML=d;
+        }
+    </script>
+</body>
+</html>

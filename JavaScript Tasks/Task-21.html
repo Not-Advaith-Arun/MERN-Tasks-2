@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Advaith Arun 21BCE5815">
+    <title>Task-21</title>
+    <style>
+        body{
+            font-size: large;
+        }
+        label,input{
+            font-size: inherit;
+        }
+        div{
+            font-size: inherit;
+        }
+        table,tr,td{
+            line-height: 50px;
+        }
+        table{
+            border: 2px solid black;
+            margin-top: 450px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <table>
+            <tr>
+                <td><label for="i1">1st Number</label></td>
+                <td><input id="i1" type="number" required />
+            </tr>
+            <tr>
+                <td><label for="i2">2nd Number</label></td>
+                <td><input id="i2" type="number" required />
+            </tr>
+            <tr>
+                <td><button type="button" onclick="Multiply()" style="margin-left:50px ;">Multiply</button></td>
+                <td><button type="button" onclick="Divide()" style="margin-left:100px ;">Divide</button></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">The result is:<div id="d1"></div></td>
+            </tr>
+        </table>
+    </center>
+
+
+
+    <script>
+        function Multiply(){
+            let x = document.getElementById("i1").value;
+            let y = document.getElementById("i2").value;
+            let z = x*y;
+            document.getElementById("d1").innerHTML = z;
+        }
+        function Divide(){
+            let x = document.getElementById("i1").value;
+            let y = document.getElementById("i2").value;
+            let z = x/y;
+            document.getElementById("d1").innerHTML = z;
+        }
+    </script>
+</body>
+</html>
